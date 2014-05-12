@@ -1,0 +1,22 @@
+<html ng-app='myApp'>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" /></script>
+</head>
+<body ng-controller='TextController'>
+	<p>{{someText.message}}</p>
+	<p ng-bind='someText.message2' ></p>
+	 «∑Ò—°÷–<input type='checkbox' ng-model='someText.status'>
+</body>
+</html>
+
+<script>
+	var myAppModule = angular.module('myApp',[]);
+
+	myAppModule.controller('TextController', function($scope){
+		var someText = {};
+		someText.message = 'You are here, Congratulations!';
+		someText.message2 = 'Message two';
+		someText.status = true;
+		$scope.someText = someText;
+	});
+</script>
