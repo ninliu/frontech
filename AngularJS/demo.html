@@ -1,0 +1,17 @@
+<html ng-app>
+<head>
+	<title>Angular JS Demo</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" /></script>
+</head>
+<body>
+	<div ng-controller='HelloController'>
+		<p>{{greeting.text}},Alibaba</p>
+	</div>
+</body>
+</html>
+
+<script>
+	function HelloController($scope){
+		$scope.greeting = {text: 'Hello'};
+	}
+</script>
